@@ -1,13 +1,14 @@
 /* Places body properly below nav and sets mobile background color */
 body {
     padding-top: 100px;
-    background-color: #dddddd;
+    background-color: #f1f1f1;
 }
 
 /* Sets mobile main parameters */
 main {
     width: 100%;
     margin: auto;
+    background-color: #f1f1f1;
 }
 
 /* Creates grid, sets color and fixes overflow */
@@ -16,7 +17,6 @@ main {
     grid-template-rows: minmax(min-content, max-content);
     overflow-wrap: break-word;
     margin: auto;
-    background-color: #f1f1f1;
 }
 
 /* Centers and pads top of page quote */
@@ -114,7 +114,6 @@ abbr {
 
     /* Sets color and other elements of main */
     main {
-        background-color: #dddddd;
         border-radius: 10px;
         box-shadow: 12px 12px 12px #404040;
         padding: 2em;

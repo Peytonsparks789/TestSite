@@ -1,0 +1,185 @@
+/* Creates pseudo variable for background color to be recalled in multiple places */
+:root {
+    --background: rgba(51, 51, 51);
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                      Scrollbar Styles                     */
+/*-----------------------------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 20%);
+
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.5);
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                         Nav Styles                        */
+/*-----------------------------------------------------------*/
+
+/* Remove any browser default styles */
+img, h1, h2, h3, p, li, ul {
+    margin: 0;
+    padding : 0;
+}
+
+/* Sets header to top of page, sets color and aligns logo */
+header {
+    position: fixed;
+    background-color: var(--background);
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Set image to proper size and apply top/bottom margins */
+header img {
+    margin: 10px 0;
+    height: auto;
+    width: 250px;
+}
+
+/* Place nav to center in mobile view */
+nav {
+    display: none;
+    text-align: center;
+    left: 0;
+}
+
+/* Remove bullets and any padding or margins applied by the ul */
+nav ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Set case, and space out list elements */
+nav li {
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+/* Set link and visited styles for nav links*/
+nav a, a:visited{
+    text-decoration: none;
+    color: #dddddd;
+}
+
+/* Set hover and active styles for nav links */
+nav a:hover, a:active {
+    color: #000;
+    /* Transition animation for color change */
+    transition: 250ms ease-in-out;
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                      Nav Toggle Styles                    */
+/*-----------------------------------------------------------*/
+
+/* Check if box is checked, by looking for first
+preceding sibling of nav which is the checkbox */
+.ToggleNav:checked ~ nav{
+    display: block;
+}
+
+/* Hide checkbox */
+.ToggleNav {
+    display: none;
+}
+
+/* Set position to top left corner of header */
+.ToggleNavLabel {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    margin-left: 1em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Set Style for each line of hamburger in menu */
+.ToggleNavLabel span, .ToggleNavLabel:before, .ToggleNavLabel:after {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 1.5em;
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Needed for top and bottom lines to display as a stack */
+.ToggleNavLabel:before, .ToggleNavLabel:after {
+    content: "";
+    position: absolute;
+}
+
+/* Set bottom line position */
+.ToggleNavLabel:before {
+    bottom: 10px;
+}
+
+/* Set top line position */
+.ToggleNavLabel:after {
+    top: 10px;
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                    Desktop Media Query                    */
+/*-----------------------------------------------------------*/
+@media only screen and (min-width: 1024px) {
+    /* Create grid for header */
+    header {
+        display: grid;
+        grid-template-columns: 0.25fr 1fr 3fr 0.25fr;
+
+    }
+
+    /* Place logo in grid and apply left margin */
+    header a img {
+        grid-column: 2 / 3;
+        margin-left: 30px;
+    }
+
+    /* Place nav into grid */
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    /* Set all list elements to flex to make inline */
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* Hide hamburger menu button */
+    .ToggleNavLabel {
+        display: none;
+    }
+}

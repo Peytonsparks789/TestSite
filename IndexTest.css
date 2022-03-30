@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto:wght@300&display=swap');
+
 /* Places body properly below nav and sets mobile background color */
 body {
     padding-top: 100px;
     background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Sets mobile main parameters */
@@ -44,10 +47,12 @@ main {
     border-radius: 40px;
 }
 
+/* Place about me in grid */
 .IndexAboutMe {
     grid-row: 3 / 4;
 }
 
+/* Style the h2 */
 .IndexAboutMe h2 {
     font-size: 2em;
     text-align: center;
@@ -55,6 +60,7 @@ main {
     padding-top: 1.5em;
 }
 
+/* Style about me p */
 .IndexAboutMe p {
     padding: 0 2em;
     font-size: 1.5em;
@@ -83,7 +89,12 @@ main {
     font-size: 1.5em;
     text-decoration: none;
     list-style: none;
+}
 
+/* Unstyle skills links */
+.IndexSkills a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Remove abbr styles */
@@ -158,3 +169,6 @@ abbr {
         text-align: left;
     }
 }
+
+
+

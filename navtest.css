@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto:wght@300&display=swap');
+
 /* Creates pseudo variable for background color to be recalled in multiple places */
 :root {
     --background: rgba(51, 51, 51);
@@ -181,5 +183,30 @@ preceding sibling of nav which is the checkbox */
     /* Hide hamburger menu button */
     .ToggleNavLabel {
         display: none;
+    }
+}
+
+header h1 {
+    display: none;
+}
+
+@media screen and (max-width: 350px) {
+    header img {
+        display: none;
+    }
+    header h1 {
+        display: flex;
+        grid-column: 2 / 3;
+        margin-left: 100px;
+        color: #dddddd;
+        font-family: 'Hurricane', cursive;
+    }
+    header a {
+        text-decoration: none;
+    }
+    .ToggleNavLabel {
+        position: absolute;
+        top: 10px;
+        left: 0;
     }
 }

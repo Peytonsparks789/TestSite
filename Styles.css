@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto:wght@300&display=swap');
+
+/* Places body properly below nav and sets mobile background color */
+body {
+    padding-top: 100px;
+    background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Sets mobile main parameters */
+main {
+    width: 100%;
+    margin: auto;
+    background-color: #f1f1f1;
+}
+
+/* Creates pseudo variable for background color to be recalled in multiple places */
+:root {
+    --background: rgba(51, 51, 51);
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                         Home Page                         */
+/*-----------------------------------------------------------*/
+/* Creates grid, sets color and fixes overflow */
+.Wrapper {
+    display: grid;
+    grid-template-rows: minmax(min-content, max-content);
+    overflow-wrap: break-word;
+    margin: auto;
+}
+
+/* Centers and pads top of page quote */
+.IndexQuote {
+    grid-row: 1;
+    display: flex;
+    padding: 1.5em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Centers and pads profile picture */
+.IndexProfilePic {
+    grid-row: 2;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+/* Rounds corners of image and sets width */
+.IndexProfilePic img {
+    margin-top: 2em;
+    width: 250px;
+    border-radius: 40px;
+}
+
+/* Place about me in grid */
+.IndexAboutMe {
+    grid-row: 3 / 4;
+}
+
+/* Style the h2 */
+.IndexAboutMe h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Style about me p */
+.IndexAboutMe p {
+    padding: 0 1.5em;
+    font-size: 1.5em;
+}
+
+/* Styles skills area */
+.IndexSkills {
+    grid-row: 5;
+    display: block;
+    padding: 30px;
+}
+
+/* Setting h3 fonts */
+.IndexSkills h3 {
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 1.5em;
+}
+
+/* Styling list */
+.IndexSkills ul {
+    text-align: center;
+    padding-bottom: 0.25em;
+    padding-top: 0.5em;
+    padding-left: 0;
+    font-size: 1.5em;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Remove skills styles on links */
+.IndexSkills a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Remove abbr styles */
+abbr {
+    all: unset;
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                     Tablet Media Query                    */
+/*-----------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+    /* Retrieve blue gradient */
+    body {
+        background-color: #485461;
+        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    }
+
+    /* Sets color and other elements of main */
+    main {
+        border-radius: 10px;
+        box-shadow: 12px 12px 12px #404040;
+        padding: 2em;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                    Desktop Media Query                    */
+/*-----------------------------------------------------------*/
+@media screen and (min-width: 1024px) {
+    /* Sets desktop grid */
+    .Wrapper {
+        grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr;
+        grid-template-rows: .5fr .1fr 3fr;
+    }
+
+    /* Place quote in desktop grid */
+    .IndexQuote {
+        grid-column: 1 / 6;
+        grid-row: 1;
+    }
+
+    /* Place in grid and remove all padding/margins */
+    .IndexProfilePic {
+        grid-column: 1 / 3;
+        padding: 0;
+        margin: 0;
+    }
+
+    .IndexAboutMe {
+        grid-row: 2 / 4;
+        grid-column: 3 / 6
+    }
+
+    /* Sets About Me label in grid */
+    .IndexAboutMe h2 {
+        align-items: center;
+    }
+
+    /* Sets paragraphs in grid and indents */
+    .IndexAboutMe p {
+        text-indent: 50px;
+        font-size: 2em;
+    }
+
+    /* Sets skills in grid */
+    .IndexSkills {
+        grid-column: 1 / 3;
+        grid-row: 3 / 5;
+    }
+
+    /* Align links to left */
+    .IndexSkills ul {
+        text-align: left;
+    }
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                     Experience Page                       */
+/*-----------------------------------------------------------*/
+.JobWrapper {
+    display: block;
+    margin: auto;
+}
+
+.JobHeader {
+    text-align: center;
+}
+
+.JobHeader p {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+/* Style header link */
+.jobHeader a:active, .JobHeader a:visited, .BlockContent a:active, .BlockContent a:visited{
+    color: black;
+}
+
+/* Apply underline to links */
+.JobHeader a, .BlockContent a {
+    font-size: 1em;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid black;
+}
+
+/* Set items to block */
+.JobBlockGrid {
+    display: block;
+    text-align: center;
+    padding-top: 3em;
+}
+
+/* Basic job image styles */
+.JobBlockGrid img {
+    width: 200px;
+    padding: 0;
+}
+
+/* Basic styles for job info */
+.Blockinfo {
+    font-size: 1.25em;
+}
+
+/* Basic job description styles */
+.JobBlockGrid p {
+    font-size: 1.5em;
+}
+
+/* Remove abbreviation styles */
+abbr {
+    all: unset;
+}
+
+@media screen and (min-width: 768px) {
+    /* Retrieve blue gradient */
+    body {
+        background-color: #485461;
+        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    }
+
+    /* Sets color and other elements of main */
+    main {
+        border-radius: 10px;
+        box-shadow: 12px 12px 12px #404040;
+        padding: 2em;
+        width: 80%;
+        margin: auto;
+    }
+
+    /* Sets outer grid to encapsulate all content */
+    .JobWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(min-content, max-content);
+        width: 95%;
+        margin: auto;
+    }
+
+    .JobHeader a {
+        font-size: 1.5em;
+    }
+
+    /* Set header in outer grid */
+    .JobHeader {
+        grid-row: 1;
+    }
+
+    /* Style h1 */
+    .JobHeader h1 {
+        text-align: center;
+    }
+
+    /* Style header paragraph */
+    .JobHeader p {
+        text-indent: 50px;
+        font-size: 1.25em;
+        padding-bottom: 2em;
+    }
+
+    /* Styles Full Experience page paragraph */
+    #JobSmallHeader {
+        text-align: center;
+        text-indent: 0;
+    }
+
+    /* Place inner grid within outer grid */
+    .JobList {
+        grid-row: 2;
+    }
+
+    /* Creates pages inner grid */
+    .JobBlockGrid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: minmax(min-content, max-content);
+    }
+
+    /* Styles image in inner grid */
+    .JobBlockGrid img {
+        grid-column: 1;
+        grid-row: 1;
+        display: block;
+        margin: auto;
+    }
+
+    /* Flex ensures vertical alignment is correct. Sets info in inner grid */
+    .Blockinfo{
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 0 0 0 1em;
+    }
+
+    /* Ensures all content in block info stays on own line */
+    .BlockContent {
+        display: block;
+    }
+
+    /* Sets paragraph placement in inner grid */
+    .JobBlockGrid p {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        text-indent: 50px;
+        text-align: left;
+    }
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                      Scrollbar Styles                     */
+/*-----------------------------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 20%);
+
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.5);
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                         Nav Styles                        */
+/*-----------------------------------------------------------*/
+
+/* Remove any browser default styles */
+nav img, nav h1, nav h2, nav h3, nav p, nav li, nav ul {
+    margin: 0;
+    padding : 0;
+}
+
+/* Sets header to top of page, sets color and aligns logo */
+header {
+    position: fixed;
+    background-color: var(--background);
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Set image to proper size and apply top/bottom margins */
+header img {
+    margin: 10px 0;
+    height: auto;
+    width: 250px;
+}
+
+/* Place nav to center in mobile view */
+nav {
+    display: none;
+    text-align: center;
+    left: 0;
+}
+
+/* Remove bullets and any padding or margins applied by the ul */
+nav ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Set case, and space out list elements */
+nav li {
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+/* Set link and visited styles for nav links*/
+nav a, nav a:visited{
+    text-decoration: none;
+    color: #dddddd;
+}
+
+/* Set hover and active styles for nav links */
+nav a:hover, nav a:active {
+    color: #000;
+    /* Transition animation for color change */
+    transition: 250ms ease-in-out;
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                      Nav Toggle Styles                    */
+/*-----------------------------------------------------------*/
+
+/* Check if box is checked, by looking for first
+preceding sibling of nav which is the checkbox */
+.ToggleNav:checked ~ nav{
+    display: block;
+}
+
+/* Hide checkbox */
+.ToggleNav {
+    display: none;
+}
+
+/* Set position to top left corner of header */
+.ToggleNavLabel {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    margin-left: 1em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Set Style for each line of hamburger in menu */
+.ToggleNavLabel span, .ToggleNavLabel:before, .ToggleNavLabel:after {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 1.5em;
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Needed for top and bottom lines to display as a stack */
+.ToggleNavLabel:before, .ToggleNavLabel:after {
+    content: "";
+    position: absolute;
+}
+
+/* Set bottom line position */
+.ToggleNavLabel:before {
+    bottom: 10px;
+}
+
+/* Set top line position */
+.ToggleNavLabel:after {
+    top: 10px;
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*                    Desktop Media Query                    */
+/*-----------------------------------------------------------*/
+@media only screen and (min-width: 1024px) {
+    /* Create grid for header */
+    header {
+        display: grid;
+        grid-template-columns: 0.25fr 1fr 3fr 0.25fr;
+
+    }
+
+    /* Place logo in grid and apply left margin */
+    header a img {
+        grid-column: 2 / 3;
+        margin-left: 30px;
+    }
+
+    /* Place nav into grid */
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    /* Set all list elements to flex to make inline */
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* Hide hamburger menu button */
+    .ToggleNavLabel {
+        display: none;
+    }
+}
+
+header h1 {
+    display: none;
+}
+
+@media screen and (max-width: 350px) {
+    header img {
+        width: 50%;
+        margin: 25px 100px;
+    }
+    .ToggleNav {
+        position: absolute;
+        top: 10px;
+    }
+}

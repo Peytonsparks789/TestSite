@@ -340,6 +340,7 @@ abbr {
         grid-row: 1;
         display: block;
         margin: auto;
+        width: 200px;
     }
 
     /* Flex ensures vertical alignment is correct. Sets info in inner grid */

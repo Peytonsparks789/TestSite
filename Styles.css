@@ -101,6 +101,14 @@ main {
     list-style: none;
 }
 
+/* Spaces out all list items */
+.IndexSkills li:not(:first-of-type) {
+    padding-top: 0.15em;
+}
+.IndexSkills li:not(:last-of-type) {
+    padding-bottom: 0.15em;
+}
+
 /* Remove skills styles on links */
 .IndexSkills a {
     text-decoration: none;
@@ -201,22 +209,37 @@ abbr {
     text-align: center;
 }
 
+.JobHeader h1 {
+    color: black;
+    font-size: 2em;
+}
+
 .JobHeader p {
     font-weight: bold;
     font-size: 1.25em;
+    margin-bottom: 0;
 }
 
-/* Style header link */
-.jobHeader a:active, .JobHeader a:visited, .BlockContent a:active, .BlockContent a:visited{
+.JobHeader button {
+    color: #dddddd;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: rgb(51, 51, 51);
+    box-shadow: 5px 5px 5px #404040;
+}
+
+/* Sets cursor on hover for button */
+.JobHeader button:hover {
+    cursor: pointer;
+}
+
+.JobHeader button:active {
+    transform: translate(5px, 5px);
+}
+
+.BlockContent a {
     color: black;
-}
-
-/* Apply underline to links */
-.JobHeader a, .BlockContent a {
     font-size: 1em;
-    text-decoration: none;
-    padding-bottom: 3px;
-    border-bottom: 1px solid black;
 }
 
 /* Set items to block */

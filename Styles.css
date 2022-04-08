@@ -221,6 +221,7 @@ abbr {
 }
 
 .JobHeader button {
+    margin-top: 20px;
     color: #dddddd;
     padding: 10px 30px;
     border-radius: 5px;
@@ -293,6 +294,10 @@ abbr {
         grid-template-rows: minmax(min-content, max-content);
         width: 95%;
         margin: auto;
+    }
+
+    .JobHeader button {
+        margin-top: 0;
     }
 
     .JobHeader a {

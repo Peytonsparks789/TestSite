@@ -375,6 +375,301 @@ abbr {
 
 
 /*-----------------------------------------------------------*/
+/*                       Projects Styles                     */
+/*-----------------------------------------------------------*/
+
+.ContactWrapper {
+    display: grid;
+}
+.SocialBox img {
+    width: 50%;
+    max-height: 70px;
+    max-width: 70px;
+}
+.SocialBox h3 {
+    font-size: 1.5em;
+}
+.SocialBox a {
+    all:unset;
+    text-decoration: underline;
+}
+.SocialBox a:hover {
+    cursor: pointer;
+}
+.SocialBox a:active {
+    color: blue;
+}
+.ContactWrapper {
+    display: block;
+    margin: 5%;
+}
+.SocialLinkGrid {
+    align-items: center;
+}
+.OuterSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 1.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.SocialBox {
+    display: block;
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+}
+.SocialBoxContainer {
+    margin: 0 2em;
+    padding: 0;
+    color: white;
+}
+.SocialLinkGrid {
+    display: grid;
+    grid-template-columns: 3em 3em;
+    grid-template-rows: 3em 3em;
+    grid-gap: 0.5em;
+    margin-bottom: 2em;
+    justify-content: center;
+}
+#two {
+    grid-column: 2;
+    grid-row: 1;
+}
+#three {
+    grid-column: 2;
+    grid-row: 2;
+}
+#four {
+    grid-column: 1;
+    grid-row: 2;
+}
+.SocialBox img {
+    width: 100%;
+}
+.SocialBox a {
+    margin: 0;
+    padding: 0;
+}
+
+.OuterSocial h2, .FormHeader h2 {
+    text-align: center;
+}
+.ContactWrapper form {
+    text-align: center;
+    margin: auto;
+}
+.Form input, .Form textarea {
+    display: block;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: auto auto 1em;
+    text-align: left;
+    background-color: lightgrey;
+    width: 65%;
+}
+.Form textarea {
+    resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+@media screen and (min-width: 1024px) {
+    /* Retrieve blue gradient */
+    body {
+        background-color: #485461;
+        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    }
+
+    /* Sets color and other elements of main */
+    main {
+        border-radius: 10px;
+        box-shadow: 12px 12px 12px #404040;
+        padding: 2em;
+        width: 80%;
+        margin: auto;
+    }
+
+    .ContactWrapper {
+        display: grid;
+        grid-template-columns: .4fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 1.5em;
+    }
+
+    .OuterSocial {
+        padding-top: 0;
+        text-align: left;
+    }
+
+    .SocialBox {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .SocialLinkGrid {
+        justify-content: left;
+    }
+
+    .OuterSocial h2, .FormHeader h2, .FormHeader p, .Form label {
+        text-align: left;
+    }
+
+    form {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        display: grid;
+    }
+
+    .Form {
+        padding: 2em 1em 0 1.5em;
+        background-color: white;
+        border: 2px solid rgb(51, 51, 51);
+        border-top: none;
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+        grid-row-gap: 2em;
+    }
+
+    .Form input, .Form textarea {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .FormHeader {
+        max-width: 100%;
+        background-color: rgb(51, 51, 51);
+        padding: 1em;
+        margin: 0;
+        color: white;
+    }
+
+    .Form button {
+        grid-column: 2;
+        width: 4em;
+        text-align: center;
+        margin: auto 0 1em auto;
+    }
+}
+
+
+/*-----------------------------------------------------------*/
+/*                       Projects Styles                     */
+/*-----------------------------------------------------------*/
+
+/* Grid containing all main page elements */
+.ProjectsWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px, 1fr);
+}
+
+/* Paragraph describing the page */
+.ProjectsDesc {
+    grid-row: 1;
+    text-align: center;
+    margin: 0 1em 2em;
+    font-size: 1.5em;
+}
+/* Show paragraph for mobile view */
+.ProjectsDesc .mobile {
+    display: block;
+    font-size: 1em;
+}
+/* Hide desktop paragraph */
+.ProjectsDesc .desktop {
+    display: none;
+    font-size: 1em;
+}
+
+/* Container for all project grids */
+.ProjectsGroup {
+    display: block;
+    text-align: center;
+    padding-bottom: 1em;
+}
+/* Container for each type of project */
+.Android, .Python, .Web {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(250px, 100%/3)), 1fr));
+}
+
+.ProjectsGroup a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Container for each individual project */
+.SingleProject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+/* Hide image text and overlay on image */
+.SingleProject h2{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Define image sizing */
+.SingleProject img {
+    width: 250px;
+    height: 150px;
+}
+
+/* On hover, make image opaque */
+.SingleProject img:hover {
+    opacity: .3;
+    transition: 300ms ease-in-out;
+}
+
+/* On hover make h2 after image visible */
+.SingleProject img:hover ~ h2 {
+    opacity: 1;
+    transition: 300ms ease-in-out;
+}
+
+/* Desktop media query */
+@media screen and (min-width: 1024px) {
+    /* Grid containing all main page elements */
+    .ProjectsWrapper {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    /* Hide mobile paragraphs */
+    .ProjectsDesc .mobile {
+        display: none;
+    }
+    /* Show desktop paragraph */
+    .ProjectsDesc .desktop {
+        display: block;
+    }
+
+    /* Place description in desktop grid */
+    .ProjectsDesc {
+        grid-row: 1;
+        grid-column: 1;
+        text-align: left;
+        margin: 0 1em auto auto;
+    }
+    /* Define grid for each project group */
+    .Android, .Python, .Web {
+        grid-row: 1;
+        grid-column: 2;
+    }
+}
+
+
+
+/*-----------------------------------------------------------*/
 /*                      Scrollbar Styles                     */
 /*-----------------------------------------------------------*/
 
@@ -421,7 +716,7 @@ header {
 /* Set image to proper size and apply top/bottom margins */
 header img {
     margin: 10px 0;
-    height: auto;
+    max-height: 200px;
     width: 250px;
 }
 

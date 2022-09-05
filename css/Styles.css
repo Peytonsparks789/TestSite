@@ -279,6 +279,8 @@ abbr {
 abbr {
     all: unset;
 }
+
+/* Used to set buttons side by side and define max width of container */
 @media screen and (min-width: 1024px) {
     .jobButtons {
         display: grid;

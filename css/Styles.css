@@ -231,6 +231,11 @@ abbr {
     border-radius: 5px;
     background-color: rgb(51, 51, 51);
     box-shadow: 5px 5px 5px #404040;
+    width: 190px;
+}
+
+.jobHeader .buttons a {
+    width: 100%;
 }
 
 /* Sets cursor on hover for button */
@@ -274,7 +279,15 @@ abbr {
 abbr {
     all: unset;
 }
-
+@media screen and (min-width: 1024px) {
+    .jobButtons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 40%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
 @media screen and (min-width: 768px) {
     /* Retrieve blue gradient */
     body {
